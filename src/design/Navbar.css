@@ -1,0 +1,97 @@
+.navbar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background-color: #020617;
+  border-bottom: 1px solid #1f2937;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-left {
+  flex: 1;
+}
+
+.navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.nav-button {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid #374151;
+  background-color: #374151;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.05s ease;
+}
+
+.nav-button:hover {
+  background-color: #111827;
+  transform: translateY(-1px);
+}
+
+.nav-main {
+  font-weight: 600;
+  min-width: 150px;
+  text-align: center;
+}
+
+.nav-button.active {
+  background-color: #374151;
+  border-color: #374151;
+  color: #ffffff;
+}
+
+.nav-button.active:hover {
+  background-color: #111827;
+  transform: translateY(-1px);
+}
+
+/* SEARCH */
+.navbar-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* inputul arata ca un nav-button */
+.navbar-search-input {
+  background-color: #374151;
+  border: 1px solid #374151;
+  color: #e5e7eb;
+  cursor: text;
+  width: 160px;
+  padding: 8px 14px;
+}
+
+.navbar-search-input::placeholder {
+  color: #9ca3af;
+}
+
+/* hover identic cu butoanele */
+.navbar-search-input:hover {
+  background-color: #111827;
+}
+
+/* cand scrii */
+.navbar-search-input:focus {
+  outline: none;
+  background-color: #111827;
+  border-color: #374151;
+}

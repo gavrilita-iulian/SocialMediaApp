@@ -1,0 +1,170 @@
+
+.myprofile-container {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 24px 60px;
+  background-color: #1f1f1f;  /* <-- asta coloreaza DOAR zona profilului */
+}
+
+.myprofile-card {
+  width: 100%;
+  max-width: 500px;
+  background-color: #020617;
+  border-radius: 12px;
+  border: 1px solid #1f2937;
+  padding: 24px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+}
+
+.myprofile-title {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #e5e7eb;
+}
+
+.myprofile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.myprofile-label {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.myprofile-textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 100px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  background-color: #020617;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.myprofile-textarea::placeholder {
+  color: #64748b;
+}
+
+.myprofile-button {
+  margin-top: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.95rem;
+  align-self: flex-end;
+  transition: background-color 0.15s ease, transform 0.05s ease,
+    box-shadow 0.15s ease;
+}
+
+.myprofile-button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.5);
+}
+
+.status-message {
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.status-message.success {
+  color: #22c55e;
+}
+
+.status-message.error,
+.error-message {
+  color: #f97316;
+}
+
+
+
+.myprofile-readonly-box {
+  margin-top: 8px;
+  margin-bottom: 20px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  background-color: #020617;
+  color: #e5e7eb;
+  min-height: 60px;
+  white-space: pre-wrap; /* sa pastreze randurile */
+}
+
+
+
+.myprofile-posts-section {
+  margin-top: 24px;
+  max-width: 800px;
+}
+
+.myprofile-posts-title {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #e5e7eb;
+  text-align: center;
+}
+
+.myprofile-no-posts {
+  font-size: 0.95rem;
+  color: #9ca3af;
+}
+
+.myprofile-posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+/* Layout general cu doua coloane */
+.myprofile-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Stanga: card mic */
+.myprofile-left {
+  flex: 0 0 300px; /* latime fixa */
+}
+
+/* Cardul mic */
+.myprofile-card.small {
+  max-width: 300px;
+  padding: 20px;
+}
+
+/* Dreapta: lista postari */
+.myprofile-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Titlu "Postarile mele" */
+.myprofile-posts-title {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  color: #e5e7eb;
+}
+
+.myprofile-posts-wrapper {
+  max-width: 600px;
+  width: 100%;
+  background-color: #1f1f1f; /* ca explore */
+  padding: 20px;
+  border-radius: 12px;
+}

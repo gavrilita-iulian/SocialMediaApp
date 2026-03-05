@@ -1,0 +1,36 @@
+
+.post-card {
+  background-color: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.post-card-header {
+  margin-bottom: 8px;
+}
+
+.post-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.post-card-body {
+  font-size: 0.95rem;
+  color: #d1d5db;
+  margin-bottom: 10px;
+}
+
+.post-card-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.post-card-username {
+  font-weight: 500;
+}

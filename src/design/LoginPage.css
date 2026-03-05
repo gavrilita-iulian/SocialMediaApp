@@ -1,0 +1,92 @@
+body {
+  background-color: #1f1f1f;
+}
+/* Containerul principal care centrează formularul */
+.login-container {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  /* Fundalul întunecat e preluat din 'body' */
+
+  /* Trucul pentru a-l muta puțin mai sus */
+  padding-bottom: 15vh;
+}
+
+/* Formularul în sine */
+.login-form {
+  width: 100%;
+  max-width: 400px; /* O lățime potrivită pentru login */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spațiu între câmpuri */
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Stil pentru input-uri */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Previne problemele de lățime */
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Efect de focus */
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Butonul de submit */
+.login-form button {
+  padding: 12px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Stiluri pentru mesaje (identice cu cele de la CreatePost) */
+.form-message {
+  text-align: center;
+  word-break: break-word;
+  font-size: 0.9em;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.form-message.success {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
