@@ -12,7 +12,6 @@ public class Profile{
     private Long id;
 
     @Column (length = 100)
-    @Size(max = 100, message = "The description can't be longer than 100 characters")
     private String description;
 
     @Column (nullable = false)

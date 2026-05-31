@@ -102,35 +102,48 @@ public class FollowingService {
     //     return followingRepository.existsByFollowerAndFollowed(follower, followed);
     // }                                   trebuie adaugat jwt sa apara altfel daca ai deja follow ca si la log in log out
 
-//     // =======================
-//     // LIST FOLLOWING
-//     // =======================
+    // =======================
+    // LIST FOLLOWING
+    // =======================
 //     @Transactional(readOnly = true)
-//     public List<User> getFollowing(Long userId) {
+//     public List<User> getFollowing() {
+//         // luam userul autenticat din SecurityContext
+//         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//         CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
 
-//         User user = userRepository.findById(userId)
+//         // username-ul la tine e emailul
+//         String email = userDetails.getUsername();
+
+//         User following = userRepository.findByEmail(email)
 //                 .orElseThrow(() -> new IllegalArgumentException("User inexistent"));
 
-//         return followingRepository.findByFollowerOrderByCreatedAtDesc(user)
+//         return followingRepository.findByFollowerOrderByCreatedAtDesc(following)
 //                 .stream()
 //                 .map(Following::getFollowed)
 //                 .toList();
-//     }
+//     }        trebuie 2 separeate una pentru  ine una pentru altii
 
 //     // =======================
 //     // LIST FOLLOWERS
 //     // =======================
 //     @Transactional(readOnly = true)
-//     public List<User> getFollowers(Long userId) {
+//     public List<User> getFollowers() {
+//          // luam userul autenticat din SecurityContext
+//         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//         CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
 
-//         User user = userRepository.findById(userId)
+//         // username-ul la tine e emailul
+//         String email = userDetails.getUsername();
+
+
+//         User followed = userRepository.findByEmail(email)
 //                 .orElseThrow(() -> new IllegalArgumentException("User inexistent"));
 
-//         return followingRepository.findByFollowedOrderByCreatedAtDesc(user)
+//         return followingRepository.findByFollowedOrderByCreatedAtDesc(followed)
 //                 .stream()
 //                 .map(Following::getFollower)
 //                 .toList();
-//     }
+//     } trebuie 2 separeate una pentru  ine una pentru altii
 
 //     // =======================
 //     // COUNTS
@@ -142,7 +155,7 @@ public class FollowingService {
 //                 .orElseThrow(() -> new IllegalArgumentException("User inexistent"));
 
 //         return followingRepository.countByFollowed(user);
-//     }
+//     } trebuie 2 separeate una pentru  ine una pentru altii
 
 //     @Transactional(readOnly = true)
 //     public long countFollowing(Long userId) {
